@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>新色彩</title>
+    <meta charset="utf-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            border: 0;
+        }
+        #sample {
+            width: 60px;
+            height: 60px;
+        }
+        fieldset {
+            margin: 10px 0;
+        }
+        fieldset div {
+            margin: 10px;
+        }
+        fieldset label {
+            display: inline-block;
+            width: 10px;
+            margin-left: 10px;
+        }
+        input[type=number] {
+            margin: 0 10px;
+            width: 80px;
+            line-height: 30px;
+            border: 1px solid #555;
+            text-indent: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <canvas id="mainCanvas"></canvas>
+        <canvas id="subCanvas"></canvas>
+        <div id="sample"></div>
+
+        <form id="colorData">
+            <fieldset name="rgbValue">
+                <div><input type="radio" name="pickType" value="R" id="R" checked ><label for="R">R</label><input type="number" name="rValue"  step="1" min="0" max="255"></div>
+                <div><input type="radio" name="pickType" value="G" id="G"><label for="G">G</label><input type="number" name="gValue"  step="1" min="0" max="255"></div>
+                <div><input type="radio" name="pickType" value="B" id="B"><label for="B">B</label><input type="number" name="bValue" step="1" min="0" max="255"></div>
+            </fieldset>
+            <fieldset name="hslValue">
+                <div><input type="radio" name="pickType" value="H" id="H"><label for="H">H</label><input type="number" name="hValue"  step="0.1" min="0.0" max="360.0">°</div>
+                <div><input type="radio" name="pickType" value="S" id="S"><label for="S">S</label><input type="number" name="sValue"  step="0.1" min="0.0" max="100.0">%</div>
+                <div><input type="radio" name="pickType" value="L" id="L"><label for="L">L</label><input type="number" name="lValue"  step="0.1" min="0.0" max="100.0">%</div>
+            </fieldset>
+        </form>
+    </div>
+    <script type="text/javascript" src="utility.js"></script>
+    <script type="text/javascript" src="initData.js"></script>
+    <script type="text/javascript" src="draw.js"></script>
+    <script type="text/javascript" src="update.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
